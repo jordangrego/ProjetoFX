@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.montreal.fx.controller.CadastroClienteController">
+   <children>
+      <VBox maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <TitledPane animated="false" collapsible="false" maxWidth="1.7976931348623157E308" text="Dados do Cliente">
+              <content>
+                <AnchorPane maxWidth="1.7976931348623157E308">
+                     <children>
+                        <VBox spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane fx:id="lblCpfCnpj" hgap="3.0" maxWidth="1.7976931348623157E308" vgap="3.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="ALWAYS" maxWidth="82.0" minWidth="52.0" prefWidth="70.0" />
+                                  <ColumnConstraints hgrow="ALWAYS" maxWidth="128.0" minWidth="98.0" prefWidth="110.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints vgrow="SOMETIMES" />
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                  <RowConstraints vgrow="SOMETIMES" />
+                                  <RowConstraints vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Cod. Cliente" />
+                                    <Label fx:id="lblCodCliente" text="-" GridPane.columnIndex="1" />
+                                    <Label fx:id="lnlNomeRazao" text="Nome" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtNomeRazao" styleClass="campo_obrigatorio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Cpf" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtCpfCnpj" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="Tipo Pessoa" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="cbTipoPessoa" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <Separator prefWidth="200.0" />
+                              <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Button fx:id="btnSalvar" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSalvarClick" text="Salvar" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnCancelar" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCancelarClick" text="Cancelar" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </AnchorPane>
+              </content>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </TitledPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

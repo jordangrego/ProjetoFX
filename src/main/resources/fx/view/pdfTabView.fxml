@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="apPdf" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.montreal.fx.controller.PdfTabController">
+	<children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ToolBar maxWidth="1.7976931348623157E308">
+              <items>
+                  <Button fx:id="btnAnterior" mnemonicParsing="false" onAction="#btnAnteriorClick" text="Anterior" />
+                  <ComboBox fx:id="cbPaginas" onAction="#cbPaginasSelectedItemChanged" />
+                  <Label fx:id="lblTotalPaginas" text="/ 30" />
+                  <Button fx:id="btnProxima" mnemonicParsing="false" onAction="#btnProximaClick" text="Próxima" />
+                  <Separator orientation="VERTICAL" />
+                <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#btnSalvarClick" text="Salvar" />
+                  <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirClick" text="Imprimir" />
+              </items>
+            </ToolBar>
+            <ScrollPane fx:id="spnlReport" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <content>
+                  <StackPane fx:id="stckPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <ImageView fx:id="imgPage" fitHeight="800.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" styleClass="image_report" />
+                     </children>
+                  </StackPane>
+               </content>
+               
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="exemplo" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b1251b35-a45e-4028-a31c-766a5bc264ff">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="codCliente" class="java.lang.Integer"/>
+	<field name="nomeRazaoSocial" class="java.lang.String"/>
+	<field name="cpfCnpj" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="73" y="22" width="395" height="38" forecolor="#FF0000" uuid="f526d1b1-9d46-4ea1-ad14-3d1973adf72a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório exemplo JASPER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="2" width="142" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="4aa36aa3-3c04-4e29-83a8-616b6cf926f5"/>
+				<textElement>
+					<font fontName="Verdana"/>
+				</textElement>
+				<text><![CDATA[codCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="142" y="2" width="275" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="54d631f0-e1da-41e1-af37-5ee77301b0f6"/>
+				<textElement>
+					<font fontName="Verdana"/>
+				</textElement>
+				<text><![CDATA[nomeRazaoSocial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="417" y="2" width="138" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="f906a676-60f6-4362-aac8-f53cdeafe624"/>
+				<textElement>
+					<font fontName="Verdana"/>
+				</textElement>
+				<text><![CDATA[cpfCnpj]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="4" width="142" height="20" uuid="6eb58af6-4a7d-4a2b-a5d3-cf42bba82d9c"/>
+				<textElement>
+					<font fontName="Verdana"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="4" width="275" height="20" uuid="0fe10c9b-7a37-4c28-adb8-95da598a3533"/>
+				<textElement>
+					<font fontName="Verdana"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeRazaoSocial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="4" width="100" height="20" uuid="fa371778-31da-406b-9622-dc668fe457eb"/>
+				<textElement>
+					<font fontName="Verdana"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cpfCnpj}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="24" width="555" height="1" uuid="88d9c38b-8133-400f-b8de-da041107e5b2"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="442" y="10" width="100" height="20" uuid="decaa396-4bfb-4373-bdce-3549e1ed4edc"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
